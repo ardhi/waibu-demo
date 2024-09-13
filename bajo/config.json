@@ -1,0 +1,4 @@
+{
+  "alias": "wbdemo",
+  "dependencies": ["waibu-bootstrap", "waibu-phosphor"]
+}

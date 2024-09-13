@@ -1,0 +1,33 @@
+{
+  "name": "waibu-demo",
+  "version": "1.0.0",
+  "description": "Demo & Showcase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ardhi/waibu-demo.git"
+  },
+  "keywords": [
+    "demo",
+    "showcase",
+    "waibu",
+    "web",
+    "webserver",
+    "bajo",
+    "framework",
+    "fastify",
+    "modular"
+  ],
+  "author": "Ardhi Lukianto <ardhi@lukianto.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ardhi/waibu-demo/issues"
+  },
+  "homepage": "https://github.com/ardhi/waibu-demo#readme",
+  "dependencies": {
+  }
+}

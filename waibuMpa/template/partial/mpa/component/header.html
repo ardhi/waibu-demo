@@ -1,0 +1,51 @@
+<c:grid-row>
+  <c:grid-col size="sm:8 md:9">
+    <c:btn-group>
+      <% for(const page of ['button', 'heading', 'grid', 'icon']) { %>
+        <c:btn variant="secondary" <% if (page === _meta.params.page) print('active') %> size="sm" href="<%= _meta.route.replace(':theme', _meta.theme.name).replace(':iconset', _meta.iconset.name).replace(':page', page) %>">
+          <c:t><% print(page) %></c:t>
+        </c:btn>
+      <% } %>
+    </c:btn-group>
+  </c:grid-col>
+  <c:grid-col size="sm:4 md:3">
+    <c:btn-group>
+      <% for(const state of [false, true]) { %>
+        <c:btn variant="secondary" <% if (state === _meta.darkMode) print('active') %> href="?dark-mode=<%= state %>">
+          <c:t><%= state ? 'dark' : 'bright' %></c:t>
+        </c:btn>
+      <% } %>
+    </c:btn-group>
+    <c:btn-group>
+      <% for(const lang of ['id', 'en-US']) { %>
+        <c:btn variant="secondary" <% if (lang === _meta.lang) print('active') %> href="?lang=<%= lang %>">
+          <c:t><%= lang %></c:t>
+        </c:btn>
+      <% } %>
+    </c:btn-group>
+  </c:grid-col>
+</c:grid-row>
+<div>
+  Theme: <%
+    let links = []
+    for (const theme of themes) {
+      const href = _meta.route.replace(':theme', theme.name).replace(':iconset', _meta.iconset.name).replace(':page', _meta.params.page)
+      const bold = theme.name === _meta.theme.name
+      const title = theme.name
+      links.push(`<a href="${href}">${bold ? '<strong>' : ''}${title}${bold ? '</strong>' : ''}</a>`)
+    }
+    print(links.join('\n'))
+  %>
+</div>
+<div>
+  Iconset: <%
+    links = []
+    for (const iconset of iconsets) {
+      const href = _meta.route.replace(':theme', _meta.theme.name).replace(':iconset', iconset.name).replace(':page', _meta.params.page)
+      const bold = iconset.name === _meta.iconset.name
+      const title = iconset.name
+      links.push(`<a href="${href}">${bold ? '<strong>' : ''}${title}${bold ? '</strong>' : ''}</a>`)
+    }
+    print(links.join('\n'))
+  %>
+</div>

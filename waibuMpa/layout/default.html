@@ -1,0 +1,57 @@
+<c:page-start>
+  <title><%= frontMatter.title ?? page.title %></title>
+</c:page-start>
+<c:navbar position="type:sticky-top" background="color:primary-subtle" text="color:white" container expandable>
+  <c:navbar-brand>
+    <c:t>Weibu MPA Components</c:t>
+  </c:navbar-brand>
+  <c:nav tag="ul">
+    <c:nav-item dropdown t:label="Theme">
+      <% for (const theme of themes ) { %>
+      <% const href = _meta.route.replace(':theme', theme.name).replace(':iconset', _meta.iconset.name).replace(':page', _meta.params.page) %>
+      <c:dropdown-item <% if (theme.name === _meta.theme.name) { print(' active') } %> href="<%= href %>"><%= theme.name %></c:dropdown-item>
+      <% } %>
+    </c:nav-item>
+    <c:nav-item dropdown t:label="Iconset">
+      <% for (const iconset of iconsets ) { %>
+      <% const href = _meta.route.replace(':theme', _meta.theme.name).replace(':iconset', iconset.name).replace(':page', _meta.params.page) %>
+      <c:dropdown-item <% if (iconset.name === _meta.iconset.name) { print(' active') } %> href="<%= href %>"><%= iconset.name %></c:dropdown-item>
+      <% } %>
+    </c:nav-item>
+  </c:nav>
+  <c:nav tag="ul" dim="width:100" flex="justify-content:end">
+    <c:btn-group>
+      <% for (const state of [false, true]) { %>
+        <c:btn color="info-outline" <% if (state === _meta.darkMode) print('active') %> href="?dark-mode=<%= state %>">
+          <c:t><%= state ? 'dark' : 'bright' %></c:t>
+        </c:btn>
+      <% } %>
+    </c:btn-group>
+    <c:btn-group margin="start:2">
+      <% for (const lang of ['id', 'en-US']) { %>
+        <c:btn color="info-outline" <% if (lang === _meta.lang) print('active') %> href="?lang=<%= lang %>">
+          <c:t><%= lang %></c:t>
+        </c:btn>
+      <% } %>
+    </c:btn-group>
+  </c:nav>
+</c:navbar>
+<c:container margin="top:3">
+  <c:grid-row>
+    <c:grid-col col="4-sm 3-md 2-lg">
+      <c:nav type="pills" flex="column">
+      <% const pages = ['heading', 'button', 'icon'] %>
+      <% for (const p of pages) { %>
+        <% const href = _meta.route.replace(':theme', _meta.theme.name).replace(':iconset', _meta.iconset.name).replace(':page', p) %>
+        <c:nav-item <% if (p === _meta.params.page) { print(' active') } %> href="<%= href %>"><%= p %></c:nav-item>
+      <% } %>
+      </c:nav>
+    </c:grid-col>
+    <c:grid-col col="8-sm 9-md 10-lg">
+      <c:h3><c:t><%= _meta.params.page %></c:t></c:h3>
+      <hr />
+      <!-- content -->
+    </c:grid-col>
+  </c:grid-row>
+</c:container>
+<c:page-end />
