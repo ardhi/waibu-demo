@@ -1,12 +1,26 @@
-async function showcase (ctx, req, reply) {
-  const { map, pick } = this.app.bajo.lib._
-  const { themes: allThemes, iconsets: allIconsets, mappingKeys: icons } = this.app.waibuMpa
-  req.theme = req.params.theme
-  req.iconset = req.params.iconset
-  const themes = map(allThemes, t => pick(t, ['name', 'framework']))
-  const iconsets = map(allIconsets, t => pick(t, ['name']))
-  const locals = { themes, iconsets, icons }
-  return await reply.view(`waibuDemo:/mpa/component/${req.params.page}.html`, locals)
+import path from 'path'
+
+const page = {
+  method: 'GET',
+  handler: async function (req, reply) {
+    const { importPkg, escape } = this.app.bajo
+    const { fs } = this.app.bajo.lib
+    const { map, pick } = this.app.bajo.lib._
+    const { themes: allThemes, iconsets: allIconsets, mappingKeys: icons } = this.app.waibuMpa
+    const fastGlob = await importPkg('fast-glob')
+    req.theme = req.params.theme
+    req.iconset = req.params.iconset
+    const themes = map(allThemes, t => pick(t, ['name', 'framework']))
+    const iconsets = map(allIconsets, t => pick(t, ['name']))
+    const pattern = `${this.dir.pkg}/waibuMpa/template/mpa/component/*.html`
+    const files = fastGlob.globSync(pattern)
+    const pages = map(files, f => path.basename(f, '.html')).sort()
+    let source = ''
+    const srcFile = pattern.replace('*', req.params.page)
+    if (fs.existsSync(srcFile)) source = escape(fs.readFileSync(srcFile, 'utf8'))
+    const locals = { themes, iconsets, icons, pages, source }
+    return await reply.view(`waibuDemo:/mpa/component/${req.params.page}.html`, locals)
+  }
 }
 
-export default showcase
+export default page
