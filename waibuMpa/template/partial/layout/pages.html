@@ -1,0 +1,6 @@
+<c:nav type="pills" flex="column">
+  <% for (const p of pages) { %>
+    <% const href = _meta.route.replace(':theme', _meta.theme.name).replace(':iconset', _meta.iconset.name).replace(':page', p) %>
+    <c:nav-item <% if (p === _meta.params.page) { print(' active') } %> href="<%= href %>"><%= _titleize(p) %></c:nav-item>
+  <% } %>
+</c:nav>

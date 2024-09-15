@@ -1,63 +1,14 @@
 <c:page-start>
   <title><%= frontMatter.title ?? page.title %></title>
 </c:page-start>
-<c:navbar position="type:sticky-top" background="color:primary-subtle" text="color:white" container expandable>
-  <c:navbar-brand>
-    <c:t>Weibu MPA Components</c:t>
-  </c:navbar-brand>
-  <c:nav tag="ul">
-    <c:nav-item dropdown label="<%= _titleize(_meta.theme.name) %>">
-      <% for (const theme of themes ) { %>
-      <% const href = _meta.route.replace(':theme', theme.name).replace(':iconset', _meta.iconset.name).replace(':page', _meta.params.page) %>
-      <c:dropdown-item <% if (theme.name === _meta.theme.name) { print(' active') } %> href="<%= href %>"><%= _titleize(theme.name) %></c:dropdown-item>
-      <% } %>
-    </c:nav-item>
-    <c:nav-item dropdown label="<%= _titleize(_meta.iconset.name) %>">
-      <% for (const iconset of iconsets ) { %>
-      <% const href = _meta.route.replace(':theme', _meta.theme.name).replace(':iconset', iconset.name).replace(':page', _meta.params.page) %>
-      <c:dropdown-item <% if (iconset.name === _meta.iconset.name) { print(' active') } %> href="<%= href %>"><%= _titleize(iconset.name) %></c:dropdown-item>
-      <% } %>
-    </c:nav-item>
-  </c:nav>
-  <c:nav tag="ul" dim="width:100" flex="justify-content:end">
-    <c:btn-group>
-      <% for (const state of [false, true]) { %>
-        <c:btn color="info-outline" <% if (state === _meta.darkMode) print('active') %> href="?dark-mode=<%= state %>">
-          <c:t><%= _titleize(state ? 'dark' : 'bright') %></c:t>
-        </c:btn>
-      <% } %>
-    </c:btn-group>
-    <c:btn-group margin="start:2">
-      <% for (const lang of ['id', 'en-US']) { %>
-        <c:btn color="info-outline" <% if (lang === _meta.lang) print('active') %> href="?lang=<%= lang %>">
-          <c:t><%= lang %></c:t>
-        </c:btn>
-      <% } %>
-    </c:btn-group>
-  </c:nav>
-</c:navbar>
+<c:include resource="waibuDemo.template:/partial/layout/navbar.html" />
 <c:container margin="top:3">
   <c:grid-row>
     <c:grid-col col="4-sm 3-md 2-lg">
-      <c:nav type="pills" flex="column">
-      <% for (const p of pages) { %>
-        <% const href = _meta.route.replace(':theme', _meta.theme.name).replace(':iconset', _meta.iconset.name).replace(':page', p) %>
-        <c:nav-item <% if (p === _meta.params.page) { print(' active') } %> href="<%= href %>"><%= _titleize(p) %></c:nav-item>
-      <% } %>
-      </c:nav>
+      <c:include resource="waibuDemo.template:/partial/layout/pages.html" />
     </c:grid-col>
     <c:grid-col col="8-sm 9-md 10-lg">
-      <c:div flex="justify-content:between">
-        <c:h3><c:t><%= _titleize(_meta.params.page) %></c:t></c:h3>
-        <c:modal trigger-icon="code" scrollable size="lg" t:title="Source">
-          <c:modal-body>
-            <pre><%= source %></pre>
-          </c:modal-body>
-          <c:modal-footer>
-            <c:btn dismiss><c:t>Close</c:t></c:btn>
-          </c:modal-footer>
-        </c:modal>
-      </c:div>
+      <c:include resource="waibuDemo.template:/partial/layout/title.html" />
       <hr />
       <!-- content -->
     </c:grid-col>

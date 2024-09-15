@@ -1,0 +1,12 @@
+<c:div flex="justify-content:between">
+  <c:h3><c:t><%= _titleize(_meta.params.page) %></c:t></c:h3>
+  <c:modal trigger-icon="code" scrollable size="lg" t:title="Source">
+    <c:modal-body>
+      <pre><code class="language-html"><%= source %></code></pre>
+    </c:modal-body>
+    <c:modal-footer>
+      <c:btn color="primary" x-on:click="navigator.clipboard.writeText('xxxx')"><c:t>Copy to Clipboard</c:t></c:btn>
+      <c:btn color="secondary" dismiss><c:t>Close</c:t></c:btn>
+    </c:modal-footer>
+  </c:modal>
+</c:div>

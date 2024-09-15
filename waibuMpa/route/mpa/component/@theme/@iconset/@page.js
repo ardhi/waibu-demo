@@ -19,7 +19,7 @@ const page = {
     const srcFile = pattern.replace('*', req.params.page)
     if (fs.existsSync(srcFile)) source = escape(fs.readFileSync(srcFile, 'utf8'))
     const locals = { themes, iconsets, icons, pages, source }
-    return await reply.view(`waibuDemo:/mpa/component/${req.params.page}.html`, locals)
+    return await reply.view(`waibuDemo.template:/mpa/component/${req.params.page}.html`, locals)
   }
 }
 
