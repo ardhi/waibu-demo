@@ -1,4 +1,4 @@
 {
   "alias": "wbdemo",
-  "dependencies": ["waibu-bootstrap", "waibu-phosphor"]
+  "dependencies": ["waibu-bootstrap", "waibu-phosphor", "waibu-alpinejs"]
 }
