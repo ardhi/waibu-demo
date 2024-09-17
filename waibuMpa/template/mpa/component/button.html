@@ -22,7 +22,7 @@
   <c:btn color="dark-outline" t:content="Dark" />
   <c:btn color="link-outline" href="#" t:content="Link" />
 </c:div>
-<c:grid-row margin="top-3">
+<c:grid-row gutter="4" margin="top-3">
   <c:grid-col col="6-md">
     <c:h4 t:content="Size" />
     <c:btn color="secondary" size="sm" t:content="Size: %s|small" />
@@ -30,22 +30,27 @@
     <c:btn color="secondary" size="lg" t:content="Size: %s|large" />
   </c:grid-col>
   <c:grid-col col="6-md">
-    <c:h4><c:t>State</c:t></c:h4>
+    <c:h4 t:content="State" />
     <c:btn active color="primary" t:content="State: %s|active" />
     <c:btn disabled color="primary" t:content="State: %s|disabled" />
     <c:btn toggle color="primary" t:content="State: %s|toggle" />
   </c:grid-col>
   <c:grid-col col="6-md">
-    <c:h4><c:t>Block</c:t></c:h4>
+    <c:h4 t:content="Block" />
     <c:div display="type:grid gap:2">
       <c:btn color="primary" t:content="Button %d|1" />
       <c:btn color="primary" t:content="Button %d|2" />
     </c:div>
   </c:grid-col>
   <c:grid-col col="6-md">
-    <c:h4><c:t>Icon</c:t></c:h4>
+    <c:h4 t:content="Icon" />
     <c:btn icon="arrowStart" color="primary" t:content="Start" />
     <c:btn icon-end="arrowEnd" color="primary" t:content="End" />
     <c:btn icon="arrowStart" icon-end="arrowEnd" color="primary" t:content="Bpth" />
+  </c:grid-col>
+  <c:grid-col col="6-md">
+    <c:h4 t:content="Close Button" />
+    <c:btn-close />
+    <c:btn-close disabled/>
   </c:grid-col>
 </c:grid-row>
