@@ -1,18 +1,17 @@
 <c:navbar position="type:sticky-top" background="color:primary-subtle" text="color:white" container expandable>
-  <c:navbar-brand>
-    <c:t>Weibu MPA Components</c:t>
+  <c:navbar-brand t:content="Weibu MPA Components" />
   </c:navbar-brand>
   <c:nav tag="ul">
-    <c:nav-item dropdown-menu-scrollable label="<%= _titleize(_meta.theme.name) %>">
+    <c:nav-item dropdown-menu-scrollable content="<%= _titleize(_meta.theme.name) %>">
       <% for (const theme of themes ) { %>
       <% const href = _meta.route.replace(':theme', theme.name).replace(':iconset', _meta.iconset.name).replace(':page', _meta.params.page) %>
-      <c:dropdown-item <% if (theme.name === _meta.theme.name) { print(' active') } %> href="<%= href %>"><%= _titleize(theme.name) %></c:dropdown-item>
+      <c:dropdown-item <% if (theme.name === _meta.theme.name) { print(' active') } %> href="<%= href %>" content="<%= _titleize(theme.name) %>" />
       <% } %>
     </c:nav-item>
-    <c:nav-item dropdown-menu-scrollable dropdown label="<%= _titleize(_meta.iconset.name) %>">
+    <c:nav-item dropdown-menu-scrollable dropdown content="<%= _titleize(_meta.iconset.name) %>">
       <% for (const iconset of iconsets ) { %>
       <% const href = _meta.route.replace(':theme', _meta.theme.name).replace(':iconset', iconset.name).replace(':page', _meta.params.page) %>
-      <c:dropdown-item <% if (iconset.name === _meta.iconset.name) { print(' active') } %> href="<%= href %>"><%= _titleize(iconset.name) %></c:dropdown-item>
+      <c:dropdown-item <% if (iconset.name === _meta.iconset.name) { print(' active') } %> href="<%= href %>" content="<%= _titleize(iconset.name) %>" />
       <% } %>
     </c:nav-item>
   </c:nav>
@@ -24,7 +23,7 @@
         </c:btn>
       <% } %>
     </c:btn-group>
-    <c:btn-group margin="start:2">
+    <c:btn-group margin="start-2">
       <% for (const lang of ['id', 'en-US']) { %>
         <c:btn color="info-outline" <% if (lang === _meta.lang) print('active') %> href="?lang=<%= lang %>">
           <c:t><%= lang %></c:t>

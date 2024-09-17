@@ -1,0 +1,103 @@
+<c:grid-row gutter="3">
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Basic" />
+    <c:btn-group>
+      <c:btn color="primary" t:content="Sunday" />
+      <c:btn color="primary" t:content="Monday" />
+      <c:btn color="primary" t:content="Tuesday" />
+    </c:btn-group>
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Active" />
+    <c:btn-group>
+      <c:btn color="primary" t:content="Sunday" />
+      <c:btn color="primary" active t:content="Monday" />
+      <c:btn color="primary" t:content="Tuesday" />
+    </c:btn-group>
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Disabled" />
+    <c:btn-group>
+      <c:btn color="primary" disabled t:content="Sunday" />
+      <c:btn color="primary" t:content="Monday" />
+      <c:btn color="primary" t:content="Tuesday" />
+    </c:btn-group>
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4><c:t>Mixed Colors</c:t></c:h4>
+    <c:btn-group>
+      <c:btn color="danger" t:content="Sunday" />
+      <c:btn color="warning" t:content="Monday" />
+      <c:btn color="success" t:content="Tuesday" />
+    </c:btn-group>
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Outline" />
+    <c:btn-group>
+      <c:btn color="primary-outline" t:content="Sunday" />
+      <c:btn color="primary-outline" t:content="Monday" />
+      <c:btn color="primary-outline" t:content="Tuesday" />
+    </c:btn-group>
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Checkbox" />
+    <c:btn-group>
+      <c:form-check-toggle color="primary-outline" t:label="Sunday"/>
+      <c:form-check-toggle color="primary-outline" t:label="Monday" checked/>
+      <c:form-check-toggle color="primary-outline" t:label="Tuesday" checked/>
+    </c:btn-group>
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Radio" />
+    <c:btn-group>
+      <c:form-radio-toggle name="radio" color="primary-outline" t:label="Sunday" checked/>
+      <c:form-radio-toggle name="radio" color="primary-outline" t:label="Monday" />
+      <c:form-radio-toggle name="radio" color="primary-outline" t:label="Tuesday" />
+    </c:btn-group>
+  </c:grid-col>
+  <c:grid-col col="6-md">
+    <c:h4 t:content="Sizing" />
+    <c:btn-group size="lg">
+      <c:btn color="primary" t:content="Sun" />
+      <c:btn color="primary" t:content="Mon" />
+      <c:btn color="primary" t:content="Tue" />
+    </c:btn-group>
+    <c:btn-group size="sm" margin="start-2">
+      <c:btn color="primary" t:content="Sun" />
+      <c:btn color="primary" t:content="Mon" />
+      <c:btn color="primary" t:content="Tue" />
+    </c:btn-group>
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Toolbar" />
+    <c:btn-toolbar>
+      <c:btn-group>
+        <c:btn color="primary">1</c:btn>
+        <c:btn color="primary">2</c:btn>
+        <c:btn color="primary">3</c:btn>
+        <c:btn color="primary">4</c:btn>
+      </c:btn-group>
+      <c:btn-group margin="start-2">
+        <c:btn color="primary">5</c:btn>
+        <c:btn color="primary">6</c:btn>
+      </c:btn-group>
+    </c:btn-toolbar>
+  </c:grid-col>
+  <c:grid-col col="6-md">
+    <c:h4 t:content="Dropdown" />
+    <c:btn-group>
+      <c:btn color="primary" t:content="Sun" />
+      <c:btn color="primary" t:content="Mon" />
+      <c:btn-group>
+        <c:dropdown t:content="More" color="primary">
+          <c:dropdown-item>Tuesday</c:dropdown-item>
+          <c:dropdown-item>Wednesday</c:dropdown-item>
+          <c:dropdown-item>Tuersday</c:dropdown-item>
+          <c:dropdown-item>Friday</c:dropdown-item>
+          <c:dropdown-item divider />
+          <c:dropdown-item>Saturday</c:dropdown-item>
+        </c:dropdown>
+      </c:btn-group>
+    </c:btn-group>
+  </c:grid-col>
+</c:grid-row>

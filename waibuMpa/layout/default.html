@@ -2,7 +2,7 @@
   <title><%= frontMatter.title ?? page.title %></title>
 </c:page-start>
 <c:include resource="waibuDemo.template:/partial/layout/navbar.html" />
-<c:container margin="top:3">
+<c:container margin="top-3 bottom-5">
   <c:grid-row>
     <c:grid-col col="4-sm 3-md 2-lg">
       <c:include resource="waibuDemo.template:/partial/layout/pages.html" />
@@ -14,4 +14,5 @@
     </c:grid-col>
   </c:grid-row>
 </c:container>
+<c:toast-stack></c:toast-stack>
 <c:page-end />

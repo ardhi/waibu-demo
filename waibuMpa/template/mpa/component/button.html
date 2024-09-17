@@ -1,51 +1,51 @@
-<c:h4><c:t>Color</c:t></c:h4>
+<c:h4 t:content="Color" />
 <c:div>
-  <c:btn color="primary"><c:t>Primary</c:t></c:btn>
-  <c:btn color="secondary"><c:t>Secondary</c:t></c:btn>
-  <c:btn color="success"><c:t>Success</c:t></c:btn>
-  <c:btn color="warning"><c:t>Warning</c:t></c:btn>
-  <c:btn color="danger"><c:t>Danger</c:t></c:btn>
-  <c:btn color="info"><c:t>Info</c:t></c:btn>
-  <c:btn color="light"><c:t>Light</c:t></c:btn>
-  <c:btn color="dark"><c:t>Dark</c:t></c:btn>
-  <c:btn color="link" href="#"><c:t>Link</c:t></c:btn>
+  <c:btn color="primary" t:content="Primary" />
+  <c:btn color="secondary" t:content="Seconday" />
+  <c:btn color="success" t:content="Success" />
+  <c:btn color="warning" t:content="Warning" />
+  <c:btn color="danger" t:content="Danger" />
+  <c:btn color="info" t:content="Info" />
+  <c:btn color="light" t:content="Light" />
+  <c:btn color="dark" t:content="Dark" />
+  <c:btn color="link" href="#" t:content="Link" />
 </c:div>
-<c:h4 margin="top:3"><c:t>Outline</c:t></c:h4>
+<c:h4 margin="top-3" t:content="Outline" />
 <c:div>
-  <c:btn color="primary-outline"><c:t>Primary</c:t></c:btn>
-  <c:btn color="secondary-outline"><c:t>Secondary</c:t></c:btn>
-  <c:btn color="success-outline"><c:t>Success</c:t></c:btn>
-  <c:btn color="warning-outline"><c:t>Warning</c:t></c:btn>
-  <c:btn color="danger-outline"><c:t>Danger</c:t></c:btn>
-  <c:btn color="info-outline"><c:t>Info</c:t></c:btn>
-  <c:btn color="light-outline"><c:t>Light</c:t></c:btn>
-  <c:btn color="dark-outline"><c:t>Dark</c:t></c:btn>
-  <c:btn color="link-outline" href="#"><c:t>Link</c:t></c:btn>
+  <c:btn color="primary-outline" t:content="Primary" />
+  <c:btn color="secondary-outline" t:content="Seconday" />
+  <c:btn color="success-outline" t:content="Success" />
+  <c:btn color="warning-outline" t:content="Warning" />
+  <c:btn color="danger-outline" t:content="Danger" />
+  <c:btn color="info-outline" t:content="Info" />
+  <c:btn color="light-outline" t:content="Light" />
+  <c:btn color="dark-outline" t:content="Dark" />
+  <c:btn color="link-outline" href="#" t:content="Link" />
 </c:div>
-<c:grid-row margin="top:3">
+<c:grid-row margin="top-3">
   <c:grid-col col="6-md">
-    <c:h4><c:t>Size</c:t></c:h4>
-    <c:btn color="secondary" size="sm"><c:t t:value="small">Size: %s</c:t></c:btn>
-    <c:btn color="secondary" size="md"><c:t t:value="medium">Size: %s</c:t></c:btn>
-    <c:btn color="secondary" size="lg"><c:t t:value="large">Size: %s</c:t></c:btn>
+    <c:h4 t:content="Size" />
+    <c:btn color="secondary" size="sm" t:content="Size: %s|small" />
+    <c:btn color="secondary" size="md" t:content="Size: %s|medium" />
+    <c:btn color="secondary" size="lg" t:content="Size: %s|large" />
   </c:grid-col>
   <c:grid-col col="6-md">
     <c:h4><c:t>State</c:t></c:h4>
-    <c:btn active color="primary"><c:t value="active">State: %s</c:t></c:btn>
-    <c:btn disabled color="primary"><c:t value="disabled">State: %s</c:t></c:btn>
-    <c:btn toggle color="primary"><c:t value="toggle">State: %s</c:t></c:btn>
+    <c:btn active color="primary" t:content="State: %s|active" />
+    <c:btn disabled color="primary" t:content="State: %s|disabled" />
+    <c:btn toggle color="primary" t:content="State: %s|toggle" />
   </c:grid-col>
   <c:grid-col col="6-md">
     <c:h4><c:t>Block</c:t></c:h4>
     <c:div display="type:grid gap:2">
-      <c:btn color="primary"><c:t value="1">Button %d</c:t></c:btn>
-      <c:btn color="primary"><c:t value="2">Button %d</c:t></c:btn>
+      <c:btn color="primary" t:content="Button %d|1" />
+      <c:btn color="primary" t:content="Button %d|2" />
     </c:div>
   </c:grid-col>
   <c:grid-col col="6-md">
     <c:h4><c:t>Icon</c:t></c:h4>
-    <c:btn icon="arrowStart" color="primary"><c:t>Start</c:t></c:btn>
-    <c:btn icon-end="arrowEnd" color="primary"><c:t>End</c:t></c:btn>
-    <c:btn icon="arrowStart" icon-end="arrowEnd" color="primary"><c:t>Both</c:t></c:btn>
+    <c:btn icon="arrowStart" color="primary" t:content="Start" />
+    <c:btn icon-end="arrowEnd" color="primary" t:content="End" />
+    <c:btn icon="arrowStart" icon-end="arrowEnd" color="primary" t:content="Bpth" />
   </c:grid-col>
 </c:grid-row>
