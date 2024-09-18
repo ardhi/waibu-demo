@@ -1,0 +1,43 @@
+<c:grid-row gutter="4">
+  <c:grid-col col="6-sm 4-lg">
+    <c:h4 t:content="Basic" />
+    <c:spinner />
+  </c:grid-col>
+  <c:grid-col col="6-sm 4-lg">
+    <c:h4 t:content="Color" />
+    <c:spinner text="color:primary"/>
+    <c:spinner text="color:secondary"/>
+    <c:spinner text="color:success"/>
+    <c:spinner text="color:warning"/>
+    <c:spinner text="color:danger"/>
+    <c:spinner text="color:info"/>
+    <c:spinner text="color:light"/>
+    <c:spinner text="color:dark"/>
+  </c:grid-col>
+  <c:grid-col col="6-sm 4-lg">
+    <c:h4 t:content="Growing" />
+    <c:spinner text="color:primary" type="grow" />
+    <c:spinner text="color:secondary" type="grow"/>
+    <c:spinner text="color:success" type="grow"/>
+    <c:spinner text="color:warning" type="grow"/>
+    <c:spinner text="color:danger" type="grow"/>
+    <c:spinner text="color:info" type="grow"/>
+    <c:spinner text="color:light" type="grow"/>
+    <c:spinner text="color:dark" type="grow"/>
+  </c:grid-col>
+  <c:grid-col col="6-sm 4-lg">
+    <c:h4 t:content="Small" />
+    <c:spinner text="color:primary" size="sm"/>
+  </c:grid-col>
+  <c:grid-col col="6-sm 4-lg">
+    <c:h4 t:content="Within Button" />
+    <c:btn color="primary" content="%s Button" disabled>
+      <c:spinner text="color:light" size="sm"/>
+    </c:btn>
+  </c:grid-col>
+  <c:grid-col col="6-sm 4-lg">
+    <c:h4 t:content="Custom Size" />
+    <c:spinner text="color:primary" style="width:3rem; height:3rem"/>
+    <c:spinner type="grow" text="color:primary" style="width:3rem; height:3rem"/>
+  </c:grid-col>
+</c:grid-row>

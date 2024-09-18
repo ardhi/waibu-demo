@@ -1,0 +1,160 @@
+<c:grid-row gutter="4">
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Input" />
+    <c:form-input type="email" t:label="Email Address" placeholder="email@domain.com" />
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Password" />
+    <c:form-password t:label="Password" value="encrypted" />
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Plaintext" />
+    <c:form-plaintext t:label="Email Address" value="email@domain.com" />
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="File Upload" />
+    <c:form-file t:label="Upload" />
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Color Picker" />
+    <c:form-color t:label="Color" />
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Datalist" />
+    <c:form-input t:label="City" datalist="Jakarta Denpasar Makassar Medan"/>
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Select" />
+    <c:form-select type="email" t:label="Country">
+      <c:option>Indonesia</c:option>
+      <c:option>Malaysia</c:option>
+      <c:option>Singapore</c:option>
+      <c:option>Phillipine</c:option>
+      <c:option>Thailand</c:option>
+      <c:option>Vietnam</c:option>
+    </c:form-select>
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Textarea" />
+    <c:form-textarea t:label="Notes" rows="3" />
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Check & Radio" />
+    <c:grid-row>
+      <c:grid-col>
+        <c:form-check t:label="Option %d|1" checked/>
+        <c:form-check t:label="Option %d|2" checked/>
+        <c:form-check t:label="Option %d|3" />
+      </c:grid-col>
+      <c:grid-col>
+        <c:form-radio t:label="Option %d|1" name="radio"/>
+        <c:form-radio t:label="Option %d|2" checked name="radio"/>
+        <c:form-radio t:label="Option %d|3" name="radio"/>
+      </c:grid-col>
+    </c:grid-row>
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Inline" />
+    <c:div margin="bottom-2">
+      <c:form-check wrapper-inline t:label="Option %d|1" checked/>
+      <c:form-check wrapper-inline t:label="Option %d|2" checked/>
+      <c:form-check wrapper-inline t:label="Option %d|3" />
+    </c:div>
+    <c:div margin="bottom-2">
+      <c:form-radio name="ir" wrapper-inline t:label="Option %d|1" />
+      <c:form-radio name="ir" wrapper-inline t:label="Option %d|2" checked/>
+      <c:form-radio name="ir" wrapper-inline t:label="Option %d|3" />
+    </c:div>
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Reverse" />
+    <c:grid-row>
+      <c:grid-col>
+        <c:form-check wrapper-reverse t:label="Option %d|1" checked/>
+        <c:form-check wrapper-reverse t:label="Option %d|2" checked/>
+        <c:form-check wrapper-reverse t:label="Option %d|3" />
+      </c:grid-col>
+      <c:grid-col>
+        <c:form-radio wrapper-reverse t:label="Option %d|1" name="radior"/>
+        <c:form-radio wrapper-reverse t:label="Option %d|2" name="radior" checked/>
+        <c:form-radio wrapper-reverse t:label="Option %d|3" name="radior"/>
+      </c:grid-col>
+    </c:grid-row>
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Switch" />
+    <c:form-switch t:label="Option %d|1" checked/>
+    <c:form-switch t:label="Option %d|2" checked/>
+    <c:form-switch t:label="Option %d|3" checked/>
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Range" />
+    <c:form-range t:label="Range" />
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Floating Label" />
+    <c:form-input type="email" t:label="Email Address" label-floating placeholder="email@domain.com" />
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Addons" />
+    <c:form-input t:label="Email Address" label-floating>
+      <c:form-input-addon prepend><input type="checkbox"/></c:form-input-addon>
+      <c:form-input-addon><c:btn t:content="Submit" /></c:form-input-addon>
+    </c:form-input>
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Readonly" />
+    <c:form-input readonly type="email" t:label="Email Address" placeholder="email@domain.com" />
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Disabled" />
+    <c:form-input disabled type="email" t:label="Email Address" placeholder="email@domain.com" />
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Toggle Check/Radio" />
+    <c:div margin="bottom-1">
+      <c:form-check-toggle color="primary" t:label="Check %d|1" />
+      <c:form-check-toggle color="primary" t:label="Check %d|2" />
+      <c:form-check-toggle color="primary" t:label="Check %d|3" />
+    </c:div>
+    <c:form-radio-toggle name="rt" color="primary" t:label="Radio %d|1" />
+    <c:form-radio-toggle name="rt" color="primary" t:label="Radio %d|2" />
+    <c:form-radio-toggle name="rt" color="primary" t:label="Radio %d|3" />
+  </c:grid-col>
+  <c:grid-col col="6-md">
+    <c:h4 t:content="Layout" />
+    <c:form>
+      <c:grid-row gutter="3" margin="bottom-3">
+        <c:grid-col col="6-md">
+          <c:form-input label-floating t:label="Email" />
+        </c:grid-col>
+        <c:grid-col col="6-md">
+          <c:form-password label-floating t:label="Password" />
+        </c:grid-col>
+        <c:grid-col col="12-md">
+          <c:form-input label-floating t:label="Address" />
+        </c:grid-col>
+        <c:grid-col col="12-md">
+          <c:form-input label-floating t:label="Address 2" />
+        </c:grid-col>
+        <c:grid-col col="6-md">
+          <c:form-input label-floating t:label="City" />
+        </c:grid-col>
+        <c:grid-col col="4-md">
+          <c:form-select label-floating t:label="Country">
+            <c:option>Indonesia</c:option>
+            <c:option>Malaysia</c:option>
+            <c:option>Singapore</c:option>
+            <c:option>Phillipine</c:option>
+            <c:option>Thailand</c:option>
+            <c:option>Vietnam</c:option>
+          </c:form-select>
+        </c:grid-col>
+        <c:grid-col col="2-md">
+          <c:form-input label-floating t:label="Zip" />
+        </c:grid-col>
+      </c:grid-row>
+      <c:btn color="primary" t:content="Submit" />
+    </c:form>
+  </c:grid-col>
+</c:grid-row>

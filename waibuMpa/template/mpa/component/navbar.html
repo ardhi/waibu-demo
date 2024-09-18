@@ -1,0 +1,60 @@
+<c:h4 t:content="Basic" />
+<c:navbar background="color:body-tertiary">
+  <c:navbar-brand t:content="Brand" />
+  <c:nav tag="ul">
+    <c:nav-item t:content="Home" />
+    <c:nav-item t:content="About Us" />
+    <c:nav-item t:content="Contact" />
+    <c:form>
+      <c:form-input t:placeholder="Search"/>
+    </c:form>
+  </c:nav>
+</c:navbar>
+
+<c:h4 margin="top-4" t:content="Expandable" />
+<c:navbar expandable background="color:body-tertiary">
+  <c:navbar-brand t:content="Brand" />
+  <c:nav tag="ul">
+    <c:nav-item t:content="Home" />
+    <c:nav-item t:content="About Us" />
+    <c:nav-item t:content="Contact" />
+  </c:nav>
+  <c:nav flex="justify-content:end">
+    <c:form>
+      <c:form-input t:placeholder="Search" no-wrapper/>
+    </c:form>
+  </c:nav>
+</c:navbar>
+
+<c:h4 margin="top-4" t:content="Color" />
+<c:navbar expandable background="color:primary" data-bs-theme="dark">
+  <c:navbar-brand t:content="Brand" />
+  <c:nav tag="ul">
+    <c:nav-item t:content="Home" />
+    <c:nav-item t:content="About Us" />
+    <c:nav-item t:content="Contact" />
+    <c:nav-item t:content="More" dropdown>
+      <c:dropdown-item t:content="Blog" />
+      <c:dropdown-item divider />
+      <c:dropdown-item t:content="Membership" />
+      <c:dropdown-item t:content="Privacy" />
+    </c:nav-item>
+  </c:nav>
+</c:navbar>
+
+<c:h4 margin="top-4" t:content="Expand Drawer" />
+<c:navbar expandable drawer :drawer-title="Drawer" background="color:body-tertiary">
+  <c:navbar-brand t:content="Brand" />
+  <c:nav tag="ul">
+    <c:nav-item t:content="Home" />
+    <c:nav-item t:content="About Us" />
+    <c:nav-item t:content="Contact" />
+    <c:nav-item t:content="More" dropdown>
+      <c:dropdown-item t:content="Blog" />
+      <c:dropdown-item divider />
+      <c:dropdown-item t:content="Membership" />
+      <c:dropdown-item t:content="Privacy" />
+    </c:nav-item>
+  </c:nav>
+</c:navbar>
+

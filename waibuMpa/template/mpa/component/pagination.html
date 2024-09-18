@@ -1,0 +1,72 @@
+<c:grid-row gutter="4">
+  <c:grid-col col="6-sm 4-lg">
+    <c:h4 t:content="Basic" />
+    <c:pagination>
+      <c:pagination-item t:content="Prev" />
+      <c:pagination-item t:content="1" />
+      <c:pagination-item t:content="2" />
+      <c:pagination-item t:content="3" />
+      <c:pagination-item t:content="Next" />
+    </c:pagination>
+  </c:grid-col>
+  <c:grid-col col="6-sm 4-lg">
+    <c:h4 t:content="Active" />
+    <c:pagination>
+      <c:pagination-item t:content="Prev" />
+      <c:pagination-item t:content="1" />
+      <c:pagination-item t:content="2" active />
+      <c:pagination-item t:content="3" />
+      <c:pagination-item t:content="Next" />
+    </c:pagination>
+  </c:grid-col>
+  <c:grid-col col="6-sm 4-lg">
+    <c:h4 t:content="Disabled" />
+    <c:pagination>
+      <c:pagination-item t:content="Prev" disabled />
+      <c:pagination-item t:content="1" active />
+      <c:pagination-item t:content="2" />
+      <c:pagination-item t:content="3" />
+      <c:pagination-item t:content="Next" />
+    </c:pagination>
+  </c:grid-col>
+  <c:grid-col col="6-sm">
+    <c:h4 t:content="Large" />
+    <c:pagination size="lg">
+      <c:pagination-item t:content="Prev" disabled />
+      <c:pagination-item t:content="1" active />
+      <c:pagination-item t:content="2" />
+      <c:pagination-item t:content="3" />
+      <c:pagination-item t:content="Next" />
+    </c:pagination>
+  </c:grid-col>
+  <c:grid-col col="6-sm">
+    <c:h4 t:content="Small" />
+    <c:pagination size="sm">
+      <c:pagination-item t:content="Prev" disabled />
+      <c:pagination-item t:content="1" active />
+      <c:pagination-item t:content="2" />
+      <c:pagination-item t:content="3" />
+      <c:pagination-item t:content="Next" />
+    </c:pagination>
+  </c:grid-col>
+  <c:grid-col col="6-sm">
+    <c:h4 t:content="Center" />
+    <c:pagination flex="justify-content:center">
+      <c:pagination-item t:content="Prev" disabled />
+      <c:pagination-item t:content="1" active />
+      <c:pagination-item t:content="2" />
+      <c:pagination-item t:content="3" />
+      <c:pagination-item t:content="Next" />
+    </c:pagination>
+  </c:grid-col>
+  <c:grid-col col="6-sm">
+    <c:h4 t:content="Right Aligned" />
+    <c:pagination flex="justify-content:end">
+      <c:pagination-item t:content="Prev" disabled />
+      <c:pagination-item t:content="1" active />
+      <c:pagination-item t:content="2" />
+      <c:pagination-item t:content="3" />
+      <c:pagination-item t:content="Next" />
+    </c:pagination>
+  </c:grid-col>
+</c:grid-row>

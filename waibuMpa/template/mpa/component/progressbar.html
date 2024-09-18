@@ -1,0 +1,46 @@
+<c:grid-row gutter="4">
+  <c:grid-col col="6-sm 4-lg">
+    <c:h4 t:content="Basic" />
+    <c:progress value="25" margin="bottom-1"/>
+    <c:progress value="50" margin="bottom-1"/>
+    <c:progress value="75" margin="bottom-1"/>
+    <c:progress value="100" />
+  </c:grid-col>
+  <c:grid-col col="6-sm 4-lg">
+    <c:h4 t:content="Basic" />
+    <c:progress background="color:primary" value="25" margin="bottom-1"/>
+    <c:progress background="color:warning" value="50" margin="bottom-1"/>
+    <c:progress background="color:danger" value="75" margin="bottom-1"/>
+    <c:progress background="color:success" value="100" />
+  </c:grid-col>
+  <c:grid-col col="6-sm 4-lg">
+    <c:h4 t:content="Strip" />
+    <c:progress background="color:primary" strip value="25" margin="bottom-1"/>
+    <c:progress background="color:warning" strip value="50" margin="bottom-1"/>
+    <c:progress background="color:danger" strip value="75" margin="bottom-1"/>
+    <c:progress background="color:success" strip value="100" />
+  </c:grid-col>
+  <c:grid-col col="6-sm 4-lg">
+    <c:h4 t:content="Strip & Animation" />
+    <c:progress background="color:primary" strip="animated" value="25" margin="bottom-1"/>
+    <c:progress background="color:warning" strip="animated" value="50" margin="bottom-1"/>
+    <c:progress background="color:danger" strip="animated" value="75" margin="bottom-1"/>
+    <c:progress background="color:success" strip="animated" value="100" />
+  </c:grid-col>
+  <c:grid-col col="6-sm 4-lg">
+    <c:h4 t:content="Height" />
+    <c:progress background="color:primary" value="25" margin="bottom-1" height="1"/>
+    <c:progress background="color:warning" value="50" margin="bottom-1" height="5"/>
+    <c:progress background="color:danger" value="75" margin="bottom-1" height="10"/>
+    <c:progress background="color:success" value="100" />
+  </c:grid-col>
+  <c:grid-col col="6-sm 4-lg">
+    <c:h4 t:content="Stack" />
+    <c:progress-stack>
+      <c:progress background="color:primary" value="25"/>
+      <c:progress background="color:warning" value="50"/>
+      <c:progress background="color:danger" value="75"/>
+      <c:progress background="color:success" value="100" />
+    </c:progress-stack>
+  </c:grid-col>
+</c:grid-row>
