@@ -1,6 +1,6 @@
 # waibu-demo
 
-Plugin name: **waibuDemo**, alias: **wbxtra**
+Plugin name: **waibuDemo**, alias: **wdemo**
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/ardhi/waibu-demo) ![NPM Version](https://img.shields.io/npm/v/waibu-demo)
 

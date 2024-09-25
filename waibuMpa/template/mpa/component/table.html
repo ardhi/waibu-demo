@@ -1,0 +1,161 @@
+<c:grid-row gutter="4">
+  <c:grid-col col="6-sm">
+    <c:h4 t:content="Basic" />
+    <c:table>
+      <c:thead>
+        <c:tr>
+          <c:th t:content="Header %d|1" />
+          <c:th t:content="Header %d|2" />
+          <c:th t:content="Header %d|3" />
+          <c:th t:content="Header %d|4" />
+        </c:tr>
+      </c:thead>
+      <c:tbody>
+        <c:tr>
+          <c:td t:content="Cell %d-%d|1|1" />
+          <c:td t:content="Cell %d-%d|1|2" />
+          <c:td t:content="Cell %d-%d|1|3" />
+          <c:td t:content="Cell %d-%d|1|4" />
+        </c:tr>
+        <c:tr>
+          <c:td t:content="Cell %d-%d|2|1" />
+          <c:td t:content="Cell %d-%d|2|2" />
+          <c:td t:content="Cell %d-%d|2|3" />
+          <c:td t:content="Cell %d-%d|2|4" />
+        </c:tr>
+        <c:tr>
+          <c:td t:content="Cell %d-%d|3|1" />
+          <c:td t:content="Cell %d-%d|3|2" />
+          <c:td t:content="Cell %d-%d|3|3" />
+          <c:td t:content="Cell %d-%d|3|4" />
+        </c:tr>
+        <c:tr>
+          <c:td t:content="Cell %d-%d|4|1" />
+          <c:td t:content="Cell %d-%d|4|2" />
+          <c:td t:content="Cell %d-%d|4|3" />
+          <c:td t:content="Cell %d-%d|4|4" />
+        </c:tr>
+      </c:tbody>
+    </c:table>
+  </c:grid-col>
+  <c:grid-col col="6-sm">
+    <c:h4 t:content="Strip, Border, Divider & Hover" />
+    <c:table strip hover border>
+      <c:thead>
+        <c:tr>
+          <c:th t:content="Header %d|1" />
+          <c:th t:content="Header %d|2" />
+          <c:th t:content="Header %d|3" />
+          <c:th t:content="Header %d|4" />
+        </c:tr>
+      </c:thead>
+      <c:tbody divider>
+        <c:tr>
+          <c:td t:content="Cell %d-%d|1|1" />
+          <c:td t:content="Cell %d-%d|1|2" />
+          <c:td t:content="Cell %d-%d|1|3" />
+          <c:td t:content="Cell %d-%d|1|4" />
+        </c:tr>
+        <c:tr>
+          <c:td t:content="Cell %d-%d|2|1" />
+          <c:td t:content="Cell %d-%d|2|2" />
+          <c:td t:content="Cell %d-%d|2|3" />
+          <c:td t:content="Cell %d-%d|2|4" />
+        </c:tr>
+        <c:tr>
+          <c:td t:content="Cell %d-%d|3|1" />
+          <c:td t:content="Cell %d-%d|3|2" />
+          <c:td t:content="Cell %d-%d|3|3" />
+          <c:td t:content="Cell %d-%d|3|4" />
+        </c:tr>
+      </c:tbody>
+      <c:tfoot divider>
+        <c:tr>
+          <c:th t:content="Footer %d|1" />
+          <c:th t:content="Footer %d|2" />
+          <c:th t:content="Footer %d|3" />
+          <c:th t:content="Footer %d|4" />
+        </c:tr>
+      </c:tfoot>
+    </c:table>
+  </c:grid-col>
+  <c:grid-col col="6-sm">
+    <c:h4 t:content="No Border & Small" />
+    <c:table no-border size="sm">
+      <c:thead>
+        <c:tr>
+          <c:th t:content="Header %d|1" />
+          <c:th t:content="Header %d|2" />
+          <c:th t:content="Header %d|3" />
+          <c:th t:content="Header %d|4" />
+        </c:tr>
+      </c:thead>
+      <c:tbody>
+        <c:tr>
+          <c:td t:content="Cell %d-%d|1|1" />
+          <c:td t:content="Cell %d-%d|1|2" />
+          <c:td t:content="Cell %d-%d|1|3" />
+          <c:td t:content="Cell %d-%d|1|4" />
+        </c:tr>
+        <c:tr>
+          <c:td t:content="Cell %d-%d|2|1" />
+          <c:td t:content="Cell %d-%d|2|2" />
+          <c:td t:content="Cell %d-%d|2|3" />
+          <c:td t:content="Cell %d-%d|2|4" />
+        </c:tr>
+        <c:tr>
+          <c:td t:content="Cell %d-%d|3|1" />
+          <c:td t:content="Cell %d-%d|3|2" />
+          <c:td t:content="Cell %d-%d|3|3" />
+          <c:td t:content="Cell %d-%d|3|4" />
+        </c:tr>
+        <c:tr>
+          <c:td t:content="Cell %d-%d|4|1" />
+          <c:td t:content="Cell %d-%d|4|2" />
+          <c:td t:content="Cell %d-%d|4|3" />
+          <c:td t:content="Cell %d-%d|4|4" />
+        </c:tr>
+      </c:tbody>
+    </c:table>
+  </c:grid-col>
+  <c:grid-col col="6-sm">
+    <c:h4 t:content="Color & Caption" />
+    <c:table>
+      <c:caption t:content="Ex tempor aliquip deserunt est incididunt" />
+      <c:thead>
+        <c:tr color="primary">
+          <c:th t:content="Header %d|1" />
+          <c:th t:content="Header %d|2" />
+          <c:th t:content="Header %d|3" />
+          <c:th t:content="Header %d|4" />
+        </c:tr>
+      </c:thead>
+      <c:tbody>
+        <c:tr>
+          <c:td color="secondary" t:content="Cell %d-%d|1|1" />
+          <c:td color="secondary" t:content="Cell %d-%d|1|2" />
+          <c:td color="success" t:content="Cell %d-%d|1|3" />
+          <c:td color="success" t:content="Cell %d-%d|1|4" />
+        </c:tr>
+        <c:tr>
+          <c:td color="warning" t:content="Cell %d-%d|2|1" />
+          <c:td color="warning" t:content="Cell %d-%d|2|2" />
+          <c:td color="danger" t:content="Cell %d-%d|2|3" />
+          <c:td color="danger" t:content="Cell %d-%d|2|4" />
+        </c:tr>
+        <c:tr>
+          <c:td color="info" t:content="Cell %d-%d|3|1" />
+          <c:td color="info" t:content="Cell %d-%d|3|2" />
+          <c:td color="dark" t:content="Cell %d-%d|3|3" />
+          <c:td color="light" t:content="Cell %d-%d|3|4" />
+        </c:tr>
+        <c:tr>
+          <c:td t:content="Cell %d-%d|4|1" />
+          <c:td t:content="Cell %d-%d|4|2" />
+          <c:td t:content="Cell %d-%d|4|3" />
+          <c:td t:content="Cell %d-%d|4|4" />
+        </c:tr>
+      </c:tbody>
+    </c:table>
+  </c:grid-col>
+</c:grid-row>

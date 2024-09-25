@@ -1,0 +1,28 @@
+<c:grid-row gutter="4">
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Responsive Image" />
+    <c:img holder="1000x200" responsive />
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Thumbnail" />
+    <c:img holder="1000x200" responsive thumbnail/>
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Rounded" />
+    <c:img holder="1000x200" responsive rounded/>
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Figure" />
+    <c:figure>
+      <c:img holder="1000x200" responsive rounded/>
+      <c:figcaption t:content="Image's caption" />
+    </c:figure>
+  </c:grid-col>
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Right Aligned Caption" />
+    <c:figure>
+      <c:img holder="1000x200" responsive rounded/>
+      <c:figcaption text="align:end" t:content="Image's caption" />
+    </c:figure>
+  </c:grid-col>
+</c:grid-row>

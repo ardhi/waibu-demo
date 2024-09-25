@@ -15,19 +15,7 @@
     </c:nav-item>
   </c:nav>
   <c:nav tag="ul" dim="width:100" flex="justify-content:end">
-    <c:btn-group>
-      <% for (const state of [false, true]) { %>
-        <c:btn color="info-outline" <% if (state === _meta.darkMode) print('active') %> href="?dark-mode=<%= state %>">
-          <c:t><%= _titleize(state ? 'dark' : 'bright') %></c:t>
-        </c:btn>
-      <% } %>
-    </c:btn-group>
-    <c:btn-group margin="start-2">
-      <% for (const lang of ['id', 'en-US']) { %>
-        <c:btn color="info-outline" <% if (lang === _meta.lang) print('active') %> href="?lang=<%= lang %>">
-          <c:t><%= lang %></c:t>
-        </c:btn>
-      <% } %>
-    </c:btn-group>
+    <c:nav-selector-darkmode dropdown-menu="end" />
+    <c:nav-selector-language dropdown-menu="end" />
   </c:nav>
 </c:navbar>

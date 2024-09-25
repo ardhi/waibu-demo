@@ -1,5 +1,5 @@
 <c:div flex="justify-content:between">
-  <c:h3 content="<%= _titleize(_meta.params.page) %>" />
+  <c:h3 content="<%= _titleize(_meta.params.page, { replacement: { _: '&' } }) %>" />
   <c:modal launch-icon="code" scroll size="lg" t:title="Source">
     <c:modal-body>
       <pre><code id="source-code" class="language-html"><%= source %></code></pre>
