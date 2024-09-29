@@ -1,5 +1,5 @@
-async function waibuMpaThemefterInjectCss ({ items, reply }) {
-  const base = reply.request.darkMode ? 'github-dark' : 'github'
+async function waibuMpaThemefterInjectCss ({ items, req }) {
+  const base = req.darkMode ? 'github-dark' : 'github'
   items.push(`waibuExtra.virtual:/highlightjs/styles/${base}.min.css`)
 }
 
