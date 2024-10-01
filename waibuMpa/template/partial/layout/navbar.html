@@ -1,5 +1,5 @@
 <c:navbar position="type:sticky-top" background="color:primary-subtle" text="color:white" container expandable>
-  <c:navbar-brand t:content="Weibu MPA Components" />
+  <c:navbar-brand content="<%= frontMatter.title ?? page.title %>" />
   <c:nav tag="ul">
     <c:nav-item dropdown-menu-scroll content="<%= _titleize(_meta.theme.name) %>">
       <% for (const theme of themes ) { %>
