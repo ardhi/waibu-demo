@@ -1,5 +1,7 @@
 ---
 t:title: Waibu MPA Components
+scripts:
+  - waibuExtra.virtual:/highlightjs/highlight.min.js
 ---
 <c:page-start>
   <title><%= frontMatter.title ?? page.title %></title>
@@ -17,5 +19,4 @@ t:title: Waibu MPA Components
     </c:grid-col>
   </c:grid-row>
 </c:container>
-<c:toast-stack></c:toast-stack>
 <c:page-end />
