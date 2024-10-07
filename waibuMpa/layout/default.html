@@ -3,9 +3,7 @@ t:title: Waibu MPA Components
 scripts:
   - waibuExtra.virtual:/highlightjs/highlight.min.js
 ---
-<c:page-start>
-  <title><%= frontMatter.title ?? page.title %></title>
-</c:page-start>
+<c:page-start title="<%= page.title %> - <%= page.appTitle %>"/>
 <c:include resource="waibuDemo.template:/partial/layout/navbar.html" />
 <c:container margin="top-3 bottom-5">
   <c:grid-row>
