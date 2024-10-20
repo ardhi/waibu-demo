@@ -5,7 +5,7 @@
       <pre><code id="source-code" class="language-html"><%= source %></code></pre>
     </c:modal-body>
     <c:modal-footer>
-      <c:btn color="primary" x-data @click="await wbs.copyToClipboard('#source-code')" t:content="Copy to Clipboard" />
+      <c:btn color="primary" x-data @click="await wbs.copyToClipboard('#source-code', true)" t:content="Copy to Clipboard" />
       <c:btn color="secondary" dismiss t:content="Close" />
     </c:modal-footer>
   </c:modal>
