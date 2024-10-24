@@ -1,4 +1,6 @@
 {
-  "prefix": "demo",
+  "waibu": {
+    "prefix": "demo"
+  },
   "dependencies": ["waibu-bootstrap", "waibu-phosphor", "waibu-alpinejs"]
 }
