@@ -1,6 +1,13 @@
 {
+  "title": "Demo",
   "waibu": {
     "prefix": "demo"
+  },
+  "waibuMpa": {
+    "home": "waibuDemo:/mpa/component",
+    "redirect": {
+      "/": "waibuDemo:/mpa/component"
+    }
   },
   "dependencies": ["waibu-bootstrap", "waibu-phosphor", "waibu-alpinejs"]
 }

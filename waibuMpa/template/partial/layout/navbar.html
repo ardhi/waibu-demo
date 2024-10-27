@@ -1,5 +1,8 @@
-<c:navbar position="type:sticky-top" background="color:primary-subtle" text="color:white" container expandable>
-  <c:navbar-brand content="<%= page.title %>" />
+<c:navbar position="type:sticky-top" border="side:bottom" background="color:primary-subtle" container expandable>
+  <c:navbar-brand app-launcher-trigger="app-launcher:drawer" />
+  <c:navbar-text margin="end-3">
+    <c:heading type="5" content="<%= page.title %>" margin="all-0"/>
+  </c:navbar-text>
   <c:nav tag="ul">
     <c:nav-item dropdown-menu-scroll content="<%= _titleize(_meta.theme.name) %>">
       <% for (const theme of themes ) { %>
@@ -15,7 +18,11 @@
     </c:nav-item>
   </c:nav>
   <c:nav tag="ul" dim="width:100" flex="justify-content:end">
-    <c:nav-selector-darkmode dropdown-menu="end" />
-    <c:nav-selector-language dropdown-menu="end" />
+    <c:nav-dropdown-user />
+    <c:nav-divider />
+    <c:nav-toggle-fullscreen />
+    <c:nav-dropdown-darkmode dropdown-menu="end" />
+    <c:nav-dropdown-language dropdown-menu="end" />
   </c:nav>
 </c:navbar>
+<c:app-launcher id="app-launcher" launcher-only />

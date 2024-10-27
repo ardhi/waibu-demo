@@ -1,20 +1,6 @@
----
-t:title: Waibu MPA Components
-scripts:
-  - waibuExtra.virtual:/highlightjs/highlight.min.js
----
-<c:page-start title="<%= page.title %> - <%= page.appTitle %>"/>
+<c:page-start title="<%= page.fullTitle %>"/>
 <c:include resource="waibuDemo.template:/partial/layout/navbar.html" />
 <c:container margin="top-3 bottom-5">
-  <c:grid-row>
-    <c:grid-col col="4-sm 3-md 2-lg">
-      <c:include resource="waibuDemo.template:/partial/layout/pages.html" />
-    </c:grid-col>
-    <c:grid-col col="8-sm 9-md 10-lg">
-      <c:include resource="waibuDemo.template:/partial/layout/title.html" />
-      <hr />
-      <!-- body -->
-    </c:grid-col>
-  </c:grid-row>
+  <!-- body -->
 </c:container>
 <c:page-end />

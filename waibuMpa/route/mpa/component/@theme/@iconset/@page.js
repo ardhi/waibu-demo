@@ -19,8 +19,9 @@ const page = {
     const srcFile = pattern.replace('*', req.params.page)
     if (fs.existsSync(srcFile)) source = escape(fs.readFileSync(srcFile, 'utf8'))
     const icons = map(iconsetMappings, 'name').sort()
-    const locals = { themes, iconsets, icons, pages, source }
-    return await reply.view(`waibuDemo.template:/mpa/component/${req.params.page}.html`, locals)
+    const page = { layout: 'waibuDemo.layout:/component.html' }
+    const params = { themes, iconsets, icons, pages, source, page }
+    return await reply.view(`waibuDemo.template:/mpa/component/${req.params.page}.html`, params)
   }
 }
 
