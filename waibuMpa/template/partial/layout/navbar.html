@@ -1,10 +1,10 @@
-<c:navbar position="type:sticky-top" border="side:bottom" background="color:primary-subtle" container expandable>
-  <c:navbar-brand app-launcher-trigger="app-launcher:drawer" />
+<c:navbar position="type:sticky-top" border="side:bottom" background="color:primary-subtle" container expandable padding="y-0">
+  <c:app-launcher-trigger class="navbar-brand" open="app-launcher:drawer" img-dim-height="50" img-dim-width="50" />
   <c:navbar-text margin="end-3">
     <c:heading type="5" content="<%= page.title %>" margin="all-0"/>
   </c:navbar-text>
   <c:nav tag="ul">
-    <c:nav-item dropdown-menu-scroll content="<%= _titleize(_meta.theme.name) %>">
+    <c:nav-item dropdown-menu-max="10" content="<%= _titleize(_meta.theme.name) %>">
       <% for (const theme of themes ) { %>
       <% const href = _meta.route.replace(':theme', theme.name).replace(':iconset', _meta.iconset.name).replace(':page', _meta.params.page) %>
       <c:dropdown-item <% if (theme.name === _meta.theme.name) { print(' active') } %> href="<%= href %>" content="<%= _titleize(theme.name) %>" />
