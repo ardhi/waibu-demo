@@ -25,7 +25,7 @@
   </c:grid-col>
   <c:grid-col col="6-md 4-lg">
     <c:h4 t:content="Select" />
-    <c:form-select type="email" t:label="Country">
+    <c:form-select t:label="Country" wrapper-margin="bottom-3">
       <c:option>Indonesia</c:option>
       <c:option>Malaysia</c:option>
       <c:option>Singapore</c:option>
@@ -33,6 +33,14 @@
       <c:option>Thailand</c:option>
       <c:option>Vietnam</c:option>
     </c:form-select>
+    <c:form-select-ext t:label="Extended Select">
+      <c:option>Indonesia</c:option>
+      <c:option>Malaysia</c:option>
+      <c:option>Singapore</c:option>
+      <c:option>Phillipine</c:option>
+      <c:option>Thailand</c:option>
+      <c:option>Vietnam</c:option>
+    </c:form-select-ext>
   </c:grid-col>
   <c:grid-col col="6-md 4-lg">
     <c:h4 t:content="Textarea" />
@@ -121,7 +129,14 @@
     <c:form-radio-toggle name="rt" color="primary" t:label="Radio %d|2" />
     <c:form-radio-toggle name="rt" color="primary" t:label="Radio %d|3" />
   </c:grid-col>
-  <c:grid-col col="6-md">
+  <c:grid-col col="6-md 4-lg">
+    <c:h4 t:content="Datetime" />
+    <c:form-datetime t:label="Date & Time" />
+    <c:form-date t:label="Date Only" />
+    <c:form-date t:label="Date Range" date-range />
+    <c:form-time t:label="Time Only" />
+  </c:grid-col>
+  <c:grid-col col="12-md 8-lg">
     <c:h4 t:content="Layout" />
     <c:form>
       <c:grid-row gutter="3" margin="bottom-3">
