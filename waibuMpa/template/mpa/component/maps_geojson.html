@@ -1,0 +1,67 @@
+<c:grid-row gutter="4">
+  <c:grid-col col="6-md">
+    <c:h4 t:content="Marker" />
+    <c:wmaps-map style="height:300px" center="-100 40" zoom="2">
+      <c:wmaps-control-navigation />
+      <c:wmaps-layer-geojson src="waibuDemo.asset:/geojson/point.geojson"
+        src-images="waibuDemo.asset:/layer/src-images.json"
+        layer="waibuDemo.asset:/layer/marker.json" />
+    </c:wmaps-map>
+  </c:grid-col>
+  <c:grid-col col="6-md">
+    <c:h4 t:content="Polygon" />
+    <c:wmaps-map style="height:300px" center="-68 43.7" zoom="3">
+      <c:wmaps-control-navigation />
+      <c:wmaps-layer-geojson src="waibuDemo.asset:/geojson/polygon.geojson"
+        layer="waibuDemo.asset:/layer/area.json waibuDemo.asset:/layer/outline.json" />
+    </c:wmaps-map>
+  </c:grid-col>
+  <c:grid-col col="6-md">
+    <c:h4 t:content="Line Gradient" />
+    <c:wmaps-map style="height:300px" center="-77.05 38.87" zoom="11">
+      <c:wmaps-control-navigation />
+      <c:wmaps-layer-geojson src="waibuDemo.asset:/geojson/line.geojson"
+        layer="waibuDemo.asset:/layer/line-gradient.json" line-gradient/>
+    </c:wmaps-map>
+  </c:grid-col>
+  <c:grid-col col="6-md">
+    <c:h4 t:content="Cluster" />
+    <c:wmaps-map style="height:300px" zoom="3">
+      <c:wmaps-control-navigation />
+      <c:wmaps-control-fullscreen />
+      <c:wmaps-layer-geojson name="earthquakes" cluster-radius="50" cluster-max-zoom="14" src="waibuDemo.asset:/geojson/earthquakes.geojson"
+        layer="waibuDemo.asset:/layer/clusters.json waibuDemo.asset:/layer/cluster-count.json waibuDemo.asset:/layer/unclustered-point.json"
+      />
+      <c:wmaps-script type="run">
+        this.wmaps.handleClusterPointer('clusters')
+        this.wmaps.handleClusterClick('clusters')
+        this.wmaps.handleNonClusterClick('unclustered-point', async (e, coordinates) => {
+          const mag = e.features[0].properties.mag
+          const tsunami = e.features[0].properties.tsunami === 1 ? 'yes' : 'no'
+          const html = 'magnitude: ' + mag + '<br>Was there a tsunami?: ' + tsunami
+          this.wmaps.popup(html, coordinates)
+        })
+      </c:wmaps-script>
+    </c:wmaps-map>
+  </c:grid-col>
+  <c:grid-col col="6-md">
+    <c:h4 t:content="Heatmap" />
+    <c:wmaps-map style="height:300px" zoom="2" center="-90 25">
+      <c:wmaps-control-navigation />
+      <c:wmaps-control-fullscreen />
+      <c:wmaps-layer-geojson name="earthquake" src="waibuDemo.asset:/geojson/earthquakes.geojson"
+        layer="waibuDemo.asset:/layer/heatmap.json waibuDemo.asset:/layer/earthquakes-point.json"
+      />
+    </c:wmaps-map>
+  </c:grid-col>
+  <c:grid-col col="6-md">
+    <c:h4 t:content="HTML Cluster" />
+    <c:wmaps-map style="height:300px" zoom="2">
+      <c:wmaps-control-navigation />
+      <c:wmaps-control-fullscreen />
+      <c:wmaps-layer-html-cluster name="earthquake" src="waibuDemo.asset:/geojson/earthquakes.geojson"
+        filter="waibuDemo.asset:/layer/cluster-filter.json" value-key="mag" cluster-id-key="cluster_id"
+      />
+  </c:wmaps-map>
+  </c:grid-col>
+</c:grid-row>

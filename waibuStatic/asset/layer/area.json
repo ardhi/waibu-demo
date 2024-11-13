@@ -1,0 +1,9 @@
+{
+  "id": "area",
+  "type": "fill",
+  "layout": {},
+  "paint": {
+    "fill-color": "#0080ff",
+    "fill-opacity": 0.5
+  }
+}

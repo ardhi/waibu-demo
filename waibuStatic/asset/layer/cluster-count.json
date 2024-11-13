@@ -1,0 +1,10 @@
+{
+  "id": "cluster-count",
+  "type": "symbol",
+  "filter": ["has", "point_count"],
+  "layout": {
+      "text-field": ["get", "point_count_abbreviated"],
+      "text-font": ["Open Sans Bold"],
+      "text-size": 12
+  }
+}

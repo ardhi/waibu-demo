@@ -1,0 +1,9 @@
+{
+  "id": "outline",
+  "type": "line",
+  "layout": {},
+  "paint": {
+    "line-color": "#000",
+    "line-width": 3
+  }
+}
