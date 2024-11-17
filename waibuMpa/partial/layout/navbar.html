@@ -1,5 +1,5 @@
 <c:navbar position="type:sticky-top" border="side:bottom" background="color:primary-subtle" container expandable padding="y-0">
-  <c:app-launcher-trigger class="navbar-brand" open="app-launcher:drawer" img-dim-height="50" img-dim-width="50" />
+  <c:app-launcher-trigger class="navbar-brand" img-dim-height="46" img-dim-width="46" margin="top-2 bottom-2" padding="all-0" x-data @click="wbs.appLauncher()"/>
   <c:navbar-text margin="end-3">
     <c:heading type="5" content="<%= page.title %>" margin="all-0"/>
   </c:navbar-text>
@@ -25,4 +25,3 @@
     <c:nav-dropdown-language dropdown-menu="end" />
   </c:nav>
 </c:navbar>
-<c:app-launcher id="app-launcher" launcher-only />
