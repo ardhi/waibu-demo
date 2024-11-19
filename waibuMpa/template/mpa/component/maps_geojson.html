@@ -3,7 +3,7 @@
     <c:h4 t:content="Marker" />
     <c:wmaps-map style="height:300px" center="-100 40" zoom="2">
       <c:wmaps-control-navigation />
-      <c:wmaps-layer src="waibuDemo.asset:/geojson/point.geojson"
+      <c:wmaps-layer-geojson src="waibuDemo.asset:/geojson/point.geojson"
         src-images="waibuDemo.asset:/layer/src-images.json"
         layer="waibuDemo.asset:/layer/marker.json" />
     </c:wmaps-map>
@@ -12,7 +12,7 @@
     <c:h4 t:content="Polygon" />
     <c:wmaps-map style="height:300px" center="-68 43.7" zoom="3">
       <c:wmaps-control-navigation />
-      <c:wmaps-layer src="waibuDemo.asset:/geojson/polygon.geojson"
+      <c:wmaps-layer-geojson src="waibuDemo.asset:/geojson/polygon.geojson"
         layer="waibuDemo.asset:/layer/area.json waibuDemo.asset:/layer/outline.json" />
     </c:wmaps-map>
   </c:grid-col>
@@ -20,7 +20,7 @@
     <c:h4 t:content="Line Gradient" />
     <c:wmaps-map style="height:300px" center="-77.05 38.87" zoom="11">
       <c:wmaps-control-navigation />
-      <c:wmaps-layer src="waibuDemo.asset:/geojson/line.geojson"
+      <c:wmaps-layer-geojson src="waibuDemo.asset:/geojson/line.geojson"
         layer="waibuDemo.asset:/layer/line-gradient.json" line-gradient/>
     </c:wmaps-map>
   </c:grid-col>
@@ -29,7 +29,7 @@
     <c:wmaps-map style="height:300px" zoom="3">
       <c:wmaps-control-navigation />
       <c:wmaps-control-fullscreen />
-      <c:wmaps-layer name="earthquakes" cluster-radius="50" cluster-max-zoom="14" src="waibuDemo.asset:/geojson/earthquakes.geojson"
+      <c:wmaps-layer-geojson name="earthquakes" cluster-radius="50" cluster-max-zoom="14" src="waibuDemo.asset:/geojson/earthquakes.geojson"
         layer="waibuDemo.asset:/layer/clusters.json waibuDemo.asset:/layer/cluster-count.json waibuDemo.asset:/layer/unclustered-point.json"
       />
       <c:wmaps-script type="run">
@@ -49,7 +49,7 @@
     <c:wmaps-map style="height:300px" zoom="2" center="-90 25">
       <c:wmaps-control-navigation />
       <c:wmaps-control-fullscreen />
-      <c:wmaps-layer name="earthquake" src="waibuDemo.asset:/geojson/earthquakes.geojson"
+      <c:wmaps-layer-geojson name="earthquake" src="waibuDemo.asset:/geojson/earthquakes.geojson"
         layer="waibuDemo.asset:/layer/heatmap.json waibuDemo.asset:/layer/earthquakes-point.json"
       />
     </c:wmaps-map>
