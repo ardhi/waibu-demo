@@ -3,8 +3,9 @@ import path from 'path'
 const page = {
   method: 'GET',
   handler: async function (req, reply) {
-    const { importPkg, escape } = this.app.bajo
+    const { importPkg } = this.app.bajo
     const { fs } = this.app.bajo.lib
+    const { escape } = this.app.waibu
     const { map, pick } = this.app.bajo.lib._
     const { themes: allThemes, iconsets: allIconsets, iconsetMappings } = this.app.waibuMpa
     const fastGlob = await importPkg('fast-glob')
