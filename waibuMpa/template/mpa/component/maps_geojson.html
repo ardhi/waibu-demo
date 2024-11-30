@@ -33,13 +33,12 @@
         layer="waibuDemo.asset:/layer/clusters.json waibuDemo.asset:/layer/cluster-count.json waibuDemo.asset:/layer/unclustered-point.json"
       />
       <c:wmaps-script type="run">
-        this.wmaps.handleClusterPointer('clusters')
+        this.wmaps.handlePointer('clusters')
         this.wmaps.handleClusterClick('clusters')
-        this.wmaps.handleNonClusterClick('unclustered-point', async (e, coordinates) => {
-          const mag = e.features[0].properties.mag
-          const tsunami = e.features[0].properties.tsunami === 1 ? 'yes' : 'no'
-          const html = 'magnitude: ' + mag + '<br>Was there a tsunami?: ' + tsunami
-          this.wmaps.popup(html, coordinates)
+        this.wmaps.handleNonClusterClick('unclustered-point', async ({ props, coordinates }) => {
+          const mag = props.mag
+          const tsunami = props.tsunami === 1 ? 'yes' : 'no'
+          return 'magnitude: ' + mag + '<br>Was there a tsunami?: ' + tsunami
         })
       </c:wmaps-script>
     </c:wmaps-map>
