@@ -8,6 +8,5 @@
     "redirect": {
       "/": "waibuDemo:/mpa/component"
     }
-  },
-  "dependencies": ["waibu-bootstrap", "waibu-phosphor", "waibu-alpinejs"]
+  }
 }
