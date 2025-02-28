@@ -1,6 +1,6 @@
 {
   "name": "waibu-demo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Demo & Showcase",
   "main": "index.js",
   "scripts": {
