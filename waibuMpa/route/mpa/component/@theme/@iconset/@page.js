@@ -3,12 +3,11 @@ import path from 'path'
 const page = {
   method: 'GET',
   handler: async function (req, reply) {
-    const { importPkg } = this.app.bajo
-    const { fs } = this.app.bajo.lib
+    const { fs } = this.lib
     const { escape } = this.app.waibu
-    const { map, pick } = this.app.bajo.lib._
+    const { map, pick } = this.lib._
+    const { fastGlob } = this.lib
     const { themes: allThemes, iconsets: allIconsets, iconsetMappings } = this.app.waibuMpa
-    const fastGlob = await importPkg('fast-glob')
     req.theme = req.params.theme
     req.iconset = req.params.iconset
     const themes = map(allThemes, t => pick(t, ['name', 'framework']))

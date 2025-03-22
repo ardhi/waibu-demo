@@ -1,5 +1,5 @@
 async function waibuMpaThemefterInjectCss ({ items, req }) {
-  const { get } = this.app.bajo.lib._
+  const { get } = this.lib._
   const reqNs = get(req, 'routeOptions.config.ns')
   if (reqNs === 'waibuDemo') {
     const base = req.darkMode ? 'github-dark' : 'github'
